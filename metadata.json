@@ -1,0 +1,6 @@
+{
+  "name": "Mon Balcon Vert",
+  "description": "Blog haut de gamme dédié au jardinage urbain, aux plantes d'intérieur, et à l'aménagement végétal de petits balcons.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
