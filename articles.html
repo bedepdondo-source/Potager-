@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tous nos Articles & Guides Horticoles | Mon Balcon Vert</title>
+    <meta name="description" content="Découvrez tous les articles, guides pratiques et tutoriels de jardinage urbain de Mon Balcon Vert. Potager en pot, plantes dépolluantes, aménagement de balcon et permaculture.">
+    <link rel="canonical" href="https://monbalconvert.site/articles.html">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://monbalconvert.site/articles.html">
+    <meta property="og:title" content="Tous nos Articles & Guides Horticoles | Mon Balcon Vert">
+    <meta property="og:description" content="Explorez notre bibliothèque complète de 15 guides d'experts paysagistes pour réussir vos cultures urbaines.">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 15 C30 35, 35 70, 50 85 C65 70, 70 35, 50 15 Z' fill='%232d5a27'/%3E%3Cpath d='M50 25 C40 40, 42 65, 50 78 C58 65, 60 40, 50 25 Z' fill='%237da87b'/%3E%3Cpath d='M50 25 L50 78' stroke='%232d5a27' stroke-width='2'/%3E%3C/svg%3E">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/article-style.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DX9FVXJGCM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-DX9FVXJGCM');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1525852133063105" crossorigin="anonymous"></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Tous les Articles Horticoles - Mon Balcon Vert",
+      "url": "https://monbalconvert.site/articles.html",
+      "description": "Bibliothèque complète de guides horticoles pour jardinage urbain, potagers de balcon et plantes d'appartement."
+    }
+    </script>
+
+    <style>
+        .articles-index-hero {
+            background-color: var(--bg-secondary);
+            padding: 60px 20px 40px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .articles-index-hero h1 {
+            font-size: 2.8rem;
+            color: var(--accent-forest);
+            margin-bottom: 14px;
+        }
+        .articles-index-hero p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        .filter-bar {
+            max-width: 1200px;
+            margin: 40px auto 20px;
+            padding: 0 20px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .filter-btn {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 8px 18px;
+            border-radius: var(--border-radius-sm);
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all var(--transition-smooth);
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background-color: var(--accent-forest);
+            color: #ffffff;
+            border-color: var(--accent-forest);
+        }
+        .catalog-container {
+            max-width: 1200px;
+            margin: 30px auto 80px;
+            padding: 0 20px;
+        }
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .catalog-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-md);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: var(--shadow-subtle);
+            transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+        }
+        .catalog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+        .catalog-img-wrapper {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+        .catalog-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        .catalog-card:hover .catalog-img-wrapper img {
+            transform: scale(1.05);
+        }
+        .catalog-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background-color: var(--accent-forest);
+            color: #ffffff;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: var(--border-radius-sm);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+        .catalog-body {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .catalog-meta {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+            font-family: var(--font-mono);
+        }
+        .catalog-title {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            line-height: 1.35;
+        }
+        .catalog-title a {
+            color: var(--text-primary);
+        }
+        .catalog-title a:hover {
+            color: var(--accent-forest);
+        }
+        .catalog-excerpt {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+        .catalog-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent-forest);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .catalog-link:hover {
+            color: var(--accent-sage);
+        }
+        @media (max-width: 992px) {
+            .catalog-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 600px) {
+            .catalog-grid { grid-template-columns: 1fr; }
+            .articles-index-hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body data-theme="light">
+
+    <!-- Header -->
+    <header id="header">
+        <div class="header-container">
+            <a href="/index.html" class="logo">
+                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 15 C30 35, 35 70, 50 85 C65 70, 70 35, 50 15 Z" fill="currentColor"/>
+                </svg>
+                <span>Mon Balcon Vert</span>
+            </a>
+            
+            <nav id="nav-menu">
+                <ul class="nav-links">
+                    <li><a class="nav-link" href="/index.html">Accueil</a></li>
+                    <li><a class="nav-link active" href="/articles.html">Tous les Articles</a></li>
+                    <li><a class="nav-link" href="/index.html#guide">Guide des plantes</a></li>
+                    <li><a class="nav-link" href="/a-propos.html">À propos</a></li>
+                    <li><a class="nav-link" href="/politique-confidentialite.html">Confidentialité</a></li>
+                </ul>
+            </nav>
+
+            <div class="controls">
+                <button class="theme-toggle" id="theme-btn" aria-label="Basculer le mode d'affichage">
+                    <svg id="sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5" stroke-width="2"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke-width="2"/></svg>
+                    <svg id="moon-icon" style="display:none;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke-width="2"/></svg>
+                </button>
+                <button class="mobile-menu-btn" id="mobile-btn" aria-label="Menu de navigation">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke-width="2"/></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="articles-index-hero">
+        <div class="breadcrumb" style="max-width:1200px; margin:0 auto 15px;">
+            <a href="/index.html">Accueil</a> &rsaquo; <span>Tous nos Articles</span>
+        </div>
+        <h1>Bibliothèque Horticole Urbaine</h1>
+        <p>Retrouvez l'intégralité de nos 15 guides complets, fiches pratiques et tutoriels pas-à-pas pour réussir vos cultures en pot et végétaliser votre intérieur.</p>
+    </section>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterArticles('all', this)">🌱 Tous les 15 Guides (15)</button>
+        <button class="filter-btn" onclick="filterArticles('potager', this)">🍅 Potager Urbain (7)</button>
+        <button class="filter-btn" onclick="filterArticles('amenagement', this)">🪴 Aménagement &amp; Balcon (2)</button>
+        <button class="filter-btn" onclick="filterArticles('interieur', this)">🌿 Plantes d'Intérieur (1)</button>
+        <button class="filter-btn" onclick="filterArticles('pratique', this)">🧪 Soins, Terreau &amp; Compost (5)</button>
+    </div>
+
+    <!-- Catalog -->
+    <main class="catalog-container">
+        <!-- Sommaire Rapide -->
+        <div style="background-color:var(--bg-card); border:1px solid var(--border-color); border-radius:var(--border-radius-md); padding:20px 24px; margin-bottom:35px; box-shadow:var(--shadow-subtle);">
+            <div style="font-weight:700; color:var(--accent-forest); font-size:1.05rem; margin-bottom:12px; display:flex; align-items:center; gap:8px;">
+                <span>📚 Liste complète des 15 dossiers disponibles :</span>
+            </div>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:10px 20px; font-size:0.85rem;">
+                <div><strong>01.</strong> <a href="/articles/creer-potager-maison-guide.html" style="color:var(--text-primary); text-decoration:none;">Créer son potager maison</a></div>
+                <div><strong>02.</strong> <a href="/articles/arrosage-balcon-vacances.html" style="color:var(--text-primary); text-decoration:none;">Arrosage de balcon en vacances</a></div>
+                <div><strong>03.</strong> <a href="/articles/amenager-petit-balcon-2m2.html" style="color:var(--text-primary); text-decoration:none;">Aménager balcon de 2m² en cocon</a></div>
+                <div><strong>04.</strong> <a href="/articles/mini-potager-legumes-balcon.html" style="color:var(--text-primary); text-decoration:none;">Mini-potager de légumes sur balcon</a></div>
+                <div><strong>05.</strong> <a href="/articles/top-plantes-depolluantes-interieur.html" style="color:var(--text-primary); text-decoration:none;">Top 10 plantes dépolluantes</a></div>
+                <div><strong>06.</strong> <a href="/articles/amenager-balcon-etroit.html" style="color:var(--text-primary); text-decoration:none;">Aménager un balcon étroit (1m)</a></div>
+                <div><strong>07.</strong> <a href="/articles/plantes-aromatiques-balcon-ombre.html" style="color:var(--text-primary); text-decoration:none;">Aromatiques pour balcon ombragé</a></div>
+                <div><strong>08.</strong> <a href="/articles/cultiver-tomates-cerises-pot.html" style="color:var(--text-primary); text-decoration:none;">Tomates cerises en pot sur balcon</a></div>
+                <div><strong>09.</strong> <a href="/articles/choisir-terreau-engrais-naturels.html" style="color:var(--text-primary); text-decoration:none;">Choisir terreau et engrais naturels</a></div>
+                <div><strong>10.</strong> <a href="/articles/lombricompostage-appartement-guide.html" style="color:var(--text-primary); text-decoration:none;">Lombricompostage en appartement</a></div>
+                <div><strong>11.</strong> <a href="/articles/calendrier-semis-potager-balcon.html" style="color:var(--text-primary); text-decoration:none;">Calendrier des semis mois par mois</a></div>
+                <div><strong>12.</strong> <a href="/articles/associer-legumes-plantes-compagnes.html" style="color:var(--text-primary); text-decoration:none;">Associer légumes et fleurs amies</a></div>
+                <div><strong>13.</strong> <a href="/articles/traiter-pucerons-maladies-naturellement.html" style="color:var(--text-primary); text-decoration:none;">Traiter pucerons sans produits chimiques</a></div>
+                <div><strong>14.</strong> <a href="/articles/reussir-fraises-en-jardiniere.html" style="color:var(--text-primary); text-decoration:none;">Réussir les fraises en jardinière</a></div>
+                <div><strong>15.</strong> <a href="/articles/cultiver-salades-radis-toute-annee.html" style="color:var(--text-primary); text-decoration:none;">Salades et radis 365 jours/an</a></div>
+            </div>
+        </div>
+
+        <div class="catalog-grid" id="articles-catalog">
+            
+            <!-- Article 1 -->
+            <article class="catalog-card" data-category="potager">
+                <div class="catalog-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1592417817098-8f3d6eb19675?auto=format&fit=crop&w=600&q=80" alt="Potager maison" loading="lazy">
+                    <span class="catalog-badge">Potager Urbain</span>
+                </div>
+                <div class="catalog-body">
+                    <div class="catalog-meta">16 Septembre 2026 • 12 min</div>
+                    <h2 class="catalog-title"><a href="/articles/creer-potager-maison-guide.html">Le potager : créer facilement son propre potager à la maison</a></h2>
+                    <p class="catalog-excerpt">Le guide de référence pour installer, aménager et réussir ses légumes en appartement et petit espace.</p>
+                    <a href="/articles/creer-potager-maison-guide.html" class="catalog-link">Lire le guide complet &rarr;</a>
+                </div>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="catalog-card" data-category="pratique">
+                <div class="catalog-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=600&q=80" alt="Arrosage balcon vacances" loading="lazy">
+                    <span class="catalog-badge">Techniques &amp; Soins</span>
+                </div>
+                <div class="catalog-body">
+                    <div class="catalog-meta">18 Juillet 2026 • 9 min</div>
+                    <h2 class="catalog-title"><a href="/articles/arrosage-balcon-vacances.html">Arrosage de balcon : solutions simples pour partir en vacances</a></h2>
+                    <p class="catalog-excerpt">Cônes céramiques, goutte-à-goutte solaires et astuces de paillage pour préserver vos plantes sans stress.</p>
+                    <a href="/articles/arrosage-balcon-vacances.html" class="catalog-link">Lire le guide complet &rarr;</a>
+                </div>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="catalog-card" data-category="amenagement">
+                <div class="catalog-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=600&q=80" alt="Aménager petit balcon 2m2" loading="lazy">
+                    <span class="catalog-badge">Aménagement</span>
+                </div>
+                <div class="catalog-body">
+                    <div class="catalog-meta">18 Juillet 2026 • 7 min</div>
+                    <h2 class="catalog-title"><a href="/articles/amenager-petit-balcon-2m2.html">5 astuces pour aménager un petit balcon de 2m² en cocon vert</a></h2>
+                    <p class="catalog-excerpt">Mobilier pliant, treillage vertical et choix des plantes compactes pour maximiser chaque centimètre carré.</p>
+                    <a href="/articles/amenager-petit-balcon-2m2.html" class="catalog-link">Lire le guide complet &rarr;</a>
+                </div>
+            </article>
+
+            <!-- Article 4 -->
+            <article class="catalog-card" data-category="potager">
+                <div class="catalog-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1592417817098-8f3d6eb19675?auto=format&fit=crop&w=600&q=80" alt="Mini-potager de légumes sur balcon" loading="lazy">
+                    <span class="catalog-badge">Potager Urbain</span>
+                </div>
+                <div class="catalog-body">
+                    <div class="catalog-meta">12 Juillet 2026 • 10 min</div>
+                    <h2 class="catalog-title"><a href="/articles/mini-potager-legumes-balcon.html">Créer un mini-potager de légumes sur son balcon : guide de A à Z</a></h2>
+                    <p class="catalog-excerpt">Le guide pas-à-pas pour récolter radis, salades, tomates et herbes sur moins de 2 mètres carrés.</p>
+                    <a href="/articles/mini-potager-legumes-balcon.html" class="catalog-link">Lire le guide complet &rarr;</a>
+                </div>
+            </article>
+
+            <!-- Article 5 -->
+            <article class="catalog-card" data-category="interieur">
+                <div class="catalog-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1545241047-6083a3684587?auto=format&fit=crop&w=600&q=80" alt="Plantes dépolluantes d'intérieur" loading="lazy">
+                    <span class="catalog-badge">Plantes d'intérieur</span>
+                </div>
+                <div class="catalog-body">
+                    <div class="catalog-meta">10 Juillet 2026 • 8 min</div>
+                    <h2 class="catalog-title"><a href="/articles/top-plantes-depolluantes-interieur.html">Top 10 des plantes dépolluantes pour assainir l'air de votre maison</a></h2>
+                    <p class="catalog-excerpt">Chlorophytum, Spathiphyllum, Sansevieria : les meilleures variétés filtrantes validées par la NASA.</p>
+                    <a href="/articles/top-plantes-depolluantes-interieur.html" class="catalog-link">Lire le guide complet &rarr;</a>
+                </div>
+            </article>
+
+            <!-- Article 6 -->
+            <article class="catalog-card" data-category="amenagement">
+                <div class="catalog-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1508588640454-7fcdb9452b1d?auto=format&fit=crop&w=600&q=80" alt="Aménager balcon étroit 1m" loading="lazy">
+                    <span class="catalog-badge">Aménagement</span>
+                </div>
+                <div class="catalog-body">
+                    <div class="catalog-meta">05 Juillet 2026 • 7 min</div>
+                    <h2 class="catalog-title"><a href="/articles/amenager-balcon-etroit.html">Optimisation de l'espace : aménager un balcon étroit de 1m de large</a></h2>
+                    <p class="catalog-excerpt">Des techniques concrètes pour balcon filant haussmannien et terrasses couloir d'appartement.</p>
+                    <a href="/articles/amenager-balcon-etroit.html" class="catalog-link">Lire le guide complet &rarr;</a>
+                </div>
+            </article>
+
+            <!-- Article 7 -->
+            <article class="catalog-card" data-category="potager">
+                <div class="catalog-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1508588640454-7fcdb9452b1d?auto=format&fit=crop&w=600&q=80" alt="Aromatiques balcon ombragé" loading="lazy">
+                    <span class="catalog-badge">Potager Urbain</span>
+                </div>
+                <div class="catalog-body">
+                    <div class="catalog-meta">18 Juillet 2026 • 11 min</div>
+                    <h2 class="catalog-title"><a href="/articles/plantes-aromatiques-balcon-ombre.html">Les 5 meilleures herbes aromatiques pour balcon ombragé</a></h2>
+                    <p class="catalog-excerpt">Menthe, ciboulette, mélisse, persil et cerfeuil : la fraîcheur végétale même sans plein soleil.</p>
+                    <a href="/articles/plantes-aromatiques-balcon-ombre.html" class="catalog-link">Lire le guide complet &rarr;</a>
+                </div>
+            </article>
+
+            <!-- Article 8 -->
+            <article class="catalog-card" data-category="potager">
+                <div class="catalog-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1592417817098-8f3d6eb19675?auto=format&fit=crop&w=600&q=80" alt="Tomates cerises en pot" loading="lazy">
+                    <span class="catalog-badge">Potager Urbain</span>
+                </div>
+                <div class="catalog-body">
+                    <div class="catalog-meta">18 Juillet 2026 • 9 min</div>
+                    <h2 class="catalog-title"><a href="/articles/cultiver-tomates-cerises-pot.html">Comment réussir la culture des tomates cerises en pot</a></h2>
+                    <p class="catalog-excerpt">Variétés naines 'Minibel', tuteurage, plantation profonde et prévention naturelle du mildiou.</p>
+                    <a href="/articles/cultiver-tomates-cerises-pot.html" class="catalog-link">Lire le guide complet &rarr;</a>
+                </div>
+            </article>
+
+            <!-- Article 9 -->
+            <article class="catalog-card" data-category="pratique">
+                <div class="catalog-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=600&q=80" alt="Terreau et engrais naturel" loading="lazy">
+                    <span class="catalog-badge">Techniques &amp; Soins</span>
+                </div>
+                <div class="catalog-body">
+                    <div class="catalog-meta">25 Juin 2026 • 10 min</div>
+                    <h2 class="catalog-title"><a href="/articles/choisir-terreau-engrais-naturels.html">Quel terreau et engrais naturel choisir pour ses plantes en pot ?</a></h2>
+                    <p class="catalog-excerpt">Fibre de coco, lombricompost, corne broyée et purins : réussir le substrat nourricier idéal.</p>
+                    <a href="/articles/choisir-terreau-engrais-naturels.html" class="catalog-link">Lire le guide complet &rarr;</a>
+                </div>
+            </article>
+
+            <!-- Article 10 -->
+            <article class="catalog-card" data-category="pratique">
+                <div class="catalog-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=600&q=80" alt="Lombricompostage appartement" loading="lazy">
+                    <span class="catalog-badge">Techniques &amp; Soins</span>
+                </div>
+                <div class="catalog-body">
+                    <div class="catalog-meta">20 Juin 2026 • 9 min</div>
+                    <h2 class="catalog-title"><a href="/articles/lombricompostage-appartement-guide.html">Faire son compost en appartement : guide du lombricompostage</a></h2>
+                    <p class="catalog-excerpt">Recycler ses biodéchets en appartement sans la moindre odeur et fabriquer son thé de vers.</p>
+                    <a href="/articles/lombricompostage-appartement-guide.html" class="catalog-link">Lire le guide complet &rarr;</a>
+                </div>
+            </article>
+
+            <!-- Article 11 -->
+            <article class="catalog-card" data-category="potager">
+                <div class="catalog-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1592417817098-8f3d6eb19675?auto=format&fit=crop&w=600&q=80" alt="Calendrier semis potager balcon" loading="lazy">
+                    <span class="catalog-badge">Potager Urbain</span>
+                </div>
+                <div class="catalog-body">
+                    <div class="catalog-meta">15 Juin 2026 • 12 min</div>
+                    <h2 class="catalog-title"><a href="/articles/calendrier-semis-potager-balcon.html">Calendrier des semis et récoltes mois par mois pour balcon</a></h2>
+                    <p class="catalog-excerpt">Tableau complet des semis sous abri, plantations et récoltes de janvier à décembre.</p>
+                    <a href="/articles/calendrier-semis-potager-balcon.html" class="catalog-link">Lire le guide complet &rarr;</a>
+                </div>
+            </article>
+
+            <!-- Article 12 -->
+            <article class="catalog-card" data-category="potager">
+                <div class="catalog-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=600&q=80" alt="Compagnonnage végétal" loading="lazy">
+                    <span class="catalog-badge">Potager Urbain</span>
+                </div>
+                <div class="catalog-body">
+                    <div class="catalog-meta">10 Juin 2026 • 9 min</div>
+                    <h2 class="catalog-title"><a href="/articles/associer-legumes-plantes-compagnes.html">Compagnonnage végétal en pot : quelles plantes associer ?</a></h2>
+                    <p class="catalog-excerpt">Tomates, basilic, œillets d'Inde et fleurs compagnes pour décupler les récoltes naturellement.</p>
+                    <a href="/articles/associer-legumes-plantes-compagnes.html" class="catalog-link">Lire le guide complet &rarr;</a>
+                </div>
+            </article>
+
+            <!-- Article 13 -->
+            <article class="catalog-card" data-category="pratique">
+                <div class="catalog-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1545241047-6083a3684587?auto=format&fit=crop&w=600&q=80" alt="Traitements naturels potager" loading="lazy">
+                    <span class="catalog-badge">Techniques &amp; Soins</span>
+                </div>
+                <div class="catalog-body">
+                    <div class="catalog-meta">05 Juin 2026 • 10 min</div>
+                    <h2 class="catalog-title"><a href="/articles/traiter-pucerons-maladies-naturellement.html">Pucerons, oïdium, mildiou : traiter naturellement les maladies</a></h2>
+                    <p class="catalog-excerpt">Savon noir, bicarbonate, décoction d'ail et purins pour soigner vos plantes de balcon sans chimie.</p>
+                    <a href="/articles/traiter-pucerons-maladies-naturellement.html" class="catalog-link">Lire le guide complet &rarr;</a>
+                </div>
+            </article>
+
+            <!-- Article 14 -->
+            <article class="catalog-card" data-category="potager">
+                <div class="catalog-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1464965911861-746a04b4bca6?auto=format&fit=crop&w=600&q=80" alt="Fraises en pot et jardinière" loading="lazy">
+                    <span class="catalog-badge">Potager Urbain</span>
+                </div>
+                <div class="catalog-body">
+                    <div class="catalog-meta">28 Mai 2026 • 8 min</div>
+                    <h2 class="catalog-title"><a href="/articles/reussir-fraises-en-jardiniere.html">Réussir la culture des fraises en pot et jardinière suspendue</a></h2>
+                    <p class="catalog-excerpt">Variétés remontantes Mara des Bois, arrosage régulier et gestion des stolons pour des fruits sucrés.</p>
+                    <a href="/articles/reussir-fraises-en-jardiniere.html" class="catalog-link">Lire le guide complet &rarr;</a>
+                </div>
+            </article>
+
+            <!-- Article 15 -->
+            <article class="catalog-card" data-category="potager">
+                <div class="catalog-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80" alt="Salades et radis toute l'année" loading="lazy">
+                    <span class="catalog-badge">Potager Urbain</span>
+                </div>
+                <div class="catalog-body">
+                    <div class="catalog-meta">15 Mai 2026 • 9 min</div>
+                    <h2 class="catalog-title"><a href="/articles/cultiver-salades-radis-toute-annee.html">Cultiver des radis et salades à couper sur son balcon toute l'année</a></h2>
+                    <p class="catalog-excerpt">Semis échelonnés, rotation de saison et conseils anti-stress hydrique pour des récoltes 365 jours par an.</p>
+                    <a href="/articles/cultiver-salades-radis-toute-annee.html" class="catalog-link">Lire le guide complet &rarr;</a>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-column">
+                <a href="/index.html" class="logo" style="margin-bottom: 16px;">
+                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:28px;height:28px;">
+                        <path d="M50 15 C30 35, 35 70, 50 85 C65 70, 70 35, 50 15 Z" fill="currentColor"/>
+                    </svg>
+                    <span>Mon Balcon Vert</span>
+                </a>
+                <p>Conseils d'experts paysagistes pour cultiver son autonomie légumière sur balcon et en ville.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="/index.html">Accueil</a></li>
+                    <li><a href="/articles.html">Tous les Articles</a></li>
+                    <li><a href="/index.html#guide">Guide des plantes</a></li>
+                    <li><a href="/a-propos.html">À propos de nous</a></li>
+                    <li><a href="/index.html#contact-form">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Pages Légales</h4>
+                <ul class="footer-links">
+                    <li><a href="/politique-confidentialite.html">Politique de Confidentialité</a></li>
+                    <li><a href="/mentions-legales.html">Mentions Légales</a></li>
+                    <li><a href="/conditions-utilisation.html">Conditions d'Utilisation</a></li>
+                    <li><a href="/a-propos.html">Qui sommes-nous ?</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contact Rédaction</h4>
+                <p><strong>contact@monbalconvert.site</strong></p>
+                <p>Mon Balcon Vert SAS - 14 rue du Faubourg Saint-Antoine, 75012 Paris</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>&copy; 2026 Mon Balcon Vert (MonBalconVert.site). Tous droits réservés.</div>
+            <div class="footer-bottom-links">
+                <a href="/mentions-legales.html">Mentions Légales</a>
+                <a href="/politique-confidentialite.html">Politique de Confidentialité</a>
+                <a href="/conditions-utilisation.html">Conditions d'Utilisation</a>
+                <a href="/a-propos.html">À Propos</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Filter & Theme Scripts -->
+    <script>
+        function filterArticles(category, clickedBtn) {
+            const cards = document.querySelectorAll('.catalog-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            buttons.forEach(btn => btn.classList.remove('active'));
+            if (clickedBtn) {
+                clickedBtn.classList.add('active');
+            }
+
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        const themeBtn = document.getElementById('theme-btn');
+        const sunIcon = document.getElementById('sun-icon');
+        const moonIcon = document.getElementById('moon-icon');
+        const mobileBtn = document.getElementById('mobile-btn');
+        const navMenu = document.getElementById('nav-menu');
+
+        const savedTheme = localStorage.getItem('mbv_theme') || 'light';
+        document.body.setAttribute('data-theme', savedTheme);
+        updateIcons(savedTheme);
+
+        themeBtn.addEventListener('click', () => {
+            const current = document.body.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            document.body.setAttribute('data-theme', next);
+            localStorage.setItem('mbv_theme', next);
+            updateIcons(next);
+        });
+
+        function updateIcons(theme) {
+            if (theme === 'dark') {
+                sunIcon.style.display = 'none';
+                moonIcon.style.display = 'block';
+            } else {
+                sunIcon.style.display = 'block';
+                moonIcon.style.display = 'none';
+            }
+        }
+
+        mobileBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
