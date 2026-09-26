@@ -129,4 +129,24 @@
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
+
+    <!-- Nouveaux Articles de Blog 2026 -->
+    <url>
+        <loc>https://monbalconvert.site/articles/calendrier-potager-2026-mois-par-mois.html</loc>
+        <lastmod>2026-09-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>https://monbalconvert.site/articles/potager-balcon-7-legumes-faciles-en-pot.html</loc>
+        <lastmod>2026-09-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>https://monbalconvert.site/articles/potager-debutant-10-erreurs-a-eviter.html</loc>
+        <lastmod>2026-09-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
 </urlset>
